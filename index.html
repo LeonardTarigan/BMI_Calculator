@@ -22,51 +22,31 @@
     <title>BMI Calculator</title>
   </head>
   <body>
-    <h1 class="d-flex justify-content-center header">
-      Apakah Berat Badanmu Ideal?
-    </h1>
-
-    <main class="container main" id="main">
+    <main>
+      <h1 class="header">Apakah berat badanmu ideal?</h1>
       <div class="container">
-        <div class="row">
-          <div class="col-5 input">
-            <label for="weight">Berat Badan (kg):</label><br />
-            <input
-              type="text"
-              id="weight"
-              name="weight"
-              value=""
-              class="inbox"
-            /><br />
-          </div>
-          <div class="col">
-            Index IMT kamu: <br />
-            <div class="imt result" id="imt">-</div>
-          </div>
+        <div class="input-section">
+          <label for="weight-in">Berat Badan (kg)</label> <br />
+          <input class="weight-in" type="text" />
+          <br />
+          <label for="height-in" class="hi-label">Tinggi Badan (m)</label>
+          <br />
+          <input class="height-in" type="text" />
+          <br />
+          <button class="count-btn" onclick="count()">Hitung</button>
         </div>
-
-        <div class="row">
-          <div class="col-5 input">
-            <label for="height">Tinggi Badan (m):</label><br />
-            <input
-              type="text"
-              id="height"
-              name="height"
-              value=""
-              class="inbox"
-            />
+        <div class="result-section">
+          <div class="index">
+            <p>Index kamu</p>
+            <h3 class="index-out">-</h3>
           </div>
-          <div class="col">
-            Status: <br />
-            <div class="status result" id="status">-</div>
+          <div class="status">
+            <p>Status</p>
+            <h3 class="status-out">-</h3>
           </div>
-        </div>
-
-        <div class="row">
-          <div class="col-5">
-            <button class="btn" type="submit" onclick="count()">Hitung</button>
+          <div class="message">
+            <p class="message-out"></p>
           </div>
-          <div class="col" id="message"></div>
         </div>
       </div>
     </main>
@@ -81,4 +61,12 @@
       crossorigin="anonymous"
     ></script>
   </body>
+
+  <footer>
+    <p>
+      * Disclaimer : Indeks ini tidak menggambarkan 100% kondisi tubuh kamu.
+      Hasil yang tertera di atas sebaiknya hanya dijadikan patokan dan bukan
+      nilai absolut. *
+    </p>
+  </footer>
 </html>

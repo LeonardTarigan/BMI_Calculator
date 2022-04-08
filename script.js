@@ -1,27 +1,31 @@
-
 function count() {
-    let weight = document.getElementById("weight").value;
-    let height = document.getElementById("height").value;
+    let weight = document.querySelector(".weight-in").value;
+    let height = document.querySelector(".height-in").value;
+    let status = document.querySelector(".status-out");
+    let message = document.querySelector(".message-out");
+    let index = document.querySelector(".index-out");
 
     if (height > 10) {
-        document.getElementById("message").innerHTML = "Tinggi harus dalam meter!"
+        message.innerHTML = "Tinggi harus dalam meter!";
+        status.innerHTML = "-";
+        index.innerHTML = "-";
     } else {
-        const result = (weight / (height * height)).toFixed(1);
+        let result = (weight / (height * height)).toFixed(1);
 
-        document.getElementById("imt").innerHTML = result;
+        index.innerHTML = result;
 
         if (result < 18.5) {
-            document.getElementById("status").innerHTML = "Underweight";
-            document.getElementById("message").innerHTML = "Wah, perlu naikin berat badan nih"
+            status.innerHTML = "Underweight";
+            message.innerHTML = "Wah, perlu naikin berat badan nih";
         } else if (result > 18.5 && result < 22.9) {
-            document.getElementById("status").innerHTML = "Normal";
-            document.getElementById("message").innerHTML = "Keren! Pertahanin ya."
+            status.innerHTML = "Normal";
+            message.innerHTML = "Keren! Pertahankan ya.";
         } else if (result > 22.9 && result < 29.9) {
-            document.getElementById("status").innerHTML = "Overweight";
-            document.getElementById("message").innerHTML = "Harus mulai diet nih. xixixi"
+            status.innerHTML = "Overweight";
+            message.innerHTML = "Harus mulai diet nih. xixixi";
         } else if (result > 29.9) {
-            document.getElementById("status").innerHTML = "Obesitas";
-            document.getElementById("message").innerHTML = "Kamu harus diet!"
+            status.innerHTML = "Obesitas";
+            message.innerHTML = "Kamu harus diet!";
         }
     }
 }

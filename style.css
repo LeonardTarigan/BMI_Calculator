@@ -1,67 +1,113 @@
 @import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700;800;900&display=swap");
 
+:root {
+  --black: #090909;
+  --dark: #2d2d34;
+  --white: #fefafa;
+  --ruby: #e40066;
+  --orange: #ff9f1c;
+  --montserrat: "Montserrat", sans-serif;
+}
+
 body {
-  background-color: #242729;
+  background-image: linear-gradient(rgba(0, 0, 0, 0.527), rgba(0, 0, 0, 0.5)),
+    url(/workout.jpg);
+  background-size: cover;
+  color: var(--white);
+  font-family: var(--montserrat);
 }
 
 .header {
-  margin: 2em auto 2em;
-  color: #fad02c;
-  font-family: "Montserrat", sans-serif;
-  font-weight: 800;
-}
-
-.main {
-  width: 40em;
-  background-color: #f9fafd;
-  border-radius: 20px;
-  padding: 2em;
-  font-family: "Montserrat", sans-serif;
-}
-
-.submit {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-.input {
-  margin-bottom: 2em;
-}
-
-.input input {
-  border-color: #242729;
-  width: 9rem;
   text-align: center;
+  margin: 3rem 0 5rem;
 }
 
-.inbox {
-  background-color: #f9fafd;
-  border-radius: 7px;
-}
-
-.result {
-  font-size: 2rem;
-  font-weight: 700;
-  border: none;
-  color: #242729;
-}
-
-.btn {
-  background-color: #fad02c;
-  border: none;
+main .container {
+  display: flex;
+  backdrop-filter: blur(12px);
+  padding: 2rem;
+  width: 60%;
   border-radius: 20px;
+  box-shadow: 5px 5px 50px 3px #090909;
+  -webkit-border-radius: 20px;
+  -moz-border-radius: 20px;
+  -ms-border-radius: 20px;
+  -o-border-radius: 20px;
 }
 
-.btn:hover {
-  background-color: #e4004e;
-  color: #f9fafd;
+main .container > * {
+  flex: 2;
 }
 
-.btn:active {
-  transform: translateY(4px);
+.hi-label,
+.count-btn {
+  margin-top: 2rem;
 }
 
-.res {
-  margin-left: 1.1rem;
+.count-btn {
+  background-color: var(--black);
+  width: fit-content;
+  border-radius: 5px;
+  color: var(--white);
+  border: none;
+  padding: 0.5rem;
+  transition: all 0.3s;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  -ms-border-radius: 5px;
+  -o-border-radius: 5px;
+  -webkit-transition: all 0.3s;
+  -moz-transition: all 0.3s;
+  -ms-transition: all 0.3s;
+  -o-transition: all 0.3s;
+}
+
+.count-btn:hover {
+  background-color: var(--orange);
+  color: var(--black);
+}
+
+.count-btn:active {
+  transform: translateY(7px);
+  -webkit-transform: translateY(7px);
+  -moz-transform: translateY(7px);
+  -ms-transform: translateY(7px);
+  -o-transform: translateY(7px);
+}
+
+input {
+  border-radius: 5px;
+  border-color: transparent;
+  text-align: center;
+  font-weight: 600;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  -ms-border-radius: 5px;
+  -o-border-radius: 5px;
+}
+
+input:focus {
+  outline: none;
+}
+
+.index,
+.status {
+  margin-bottom: 2rem;
+}
+
+.result-section h3 {
+  margin-top: -1rem;
+  text-align: start;
+}
+
+footer {
+  text-align: center;
+  font-size: 0.8rem;
+}
+
+footer p {
+  width: 100%;
+  position: absolute;
+  bottom: 1rem;
+  padding: 0 5rem;
 }
