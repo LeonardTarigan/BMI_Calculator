@@ -13,6 +13,7 @@ body {
   background-image: linear-gradient(rgba(0, 0, 0, 0.527), rgba(0, 0, 0, 0.5)),
     url(workout.jpg);
   background-size: cover;
+  background-attachment: fixed;
   color: var(--white);
   font-family: var(--montserrat);
 }
@@ -110,4 +111,60 @@ footer p {
   position: absolute;
   bottom: 1rem;
   padding: 0 5rem;
+}
+
+@media only screen and (max-width: 600px) {
+  main .container {
+    flex-direction: column;
+    width: fit-content;
+  }
+
+  .result-section {
+    margin-top: 2rem;
+  }
+
+  footer {
+    margin-top: 2rem;
+    bottom: 0;
+  }
+
+  footer p {
+    position: static;
+    padding: 1rem;
+  }
+}
+
+@media only screen and (min-width: 600px) and (max-width: 1200px) {
+  main .container {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .result-section {
+    margin-top: 3rem;
+  }
+
+  .result-section h3 {
+    text-align: center;
+  }
+
+  /* footer {
+    margin-top: 5rem;
+  }
+
+  footer p {
+    position: static;
+    padding: 1rem;
+  } */
+}
+
+@media only screen and (max-height: 600px) {
+  footer {
+    margin-top: 5rem;
+  }
+
+  footer p {
+    position: static;
+    padding: 1rem;
+  }
 }
